@@ -63,6 +63,7 @@ body {
   align-items: center;
   font-size: 1.1rem;
   font-weight: 600;
+
   i {
     color: $dark-grey;
     font-size: 1.5rem;
@@ -112,7 +113,7 @@ input[type="search"] {
 
   button {
     border: none;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     padding: 0.7rem 2.7rem;
     margin: 0 0.5rem;
     background-color: $light-turq;
@@ -150,6 +151,28 @@ input[type="search"] {
 .username {
   font-size: 1.7rem;
   font-weight: 600;
+}
+
+.small {
+  margin: 0 0 1rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.small-username {
+  font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+.small-tagline {
+  font-size: 0.8rem;
+}
+
+.small-icon {
+  width: 50px;
+  height: 50px;
 }
 
 //----------------------------SIDEBAR CSS----------------------------//
@@ -242,6 +265,7 @@ input[type="search"] {
   i {
     margin: 0 0.3rem;
     transition: 300ms ease;
+    color: $med-grey;
 
     &:hover {
       color: $light-pink;

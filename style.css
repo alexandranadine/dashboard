@@ -91,7 +91,7 @@ input[type=search]:focus {
 }
 .header-bottom button {
   border: none;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   padding: 0.7rem 2.7rem;
   margin: 0 0.5rem;
   background-color: #3fa4bd;
@@ -127,6 +127,27 @@ input[type=search]:focus {
 .username {
   font-size: 1.7rem;
   font-weight: 600;
+}
+
+.small {
+  margin: 0 0 1rem 0;
+}
+.small:last-child {
+  margin-bottom: 0;
+}
+
+.small-username {
+  font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+.small-tagline {
+  font-size: 0.8rem;
+}
+
+.small-icon {
+  width: 50px;
+  height: 50px;
 }
 
 .sidebar {
@@ -208,6 +229,7 @@ input[type=search]:focus {
 .card-bottom i {
   margin: 0 0.3rem;
   transition: 300ms ease;
+  color: #474747;
 }
 .card-bottom i:hover {
   color: #e981ac;
