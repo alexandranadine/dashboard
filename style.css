@@ -1,0 +1,146 @@
+html,
+body {
+  height: 100%;
+}
+
+main {
+  background-color: #eee;
+  grid-area: main;
+  padding: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 4fr;
+  grid-template-rows: minmax(200px, 1fr) 4fr;
+  grid-template-areas: "sidebar header header header header" "sidebar main main main main" "sidebar main main main main" "sidebar main main main main" "sidebar main main main main";
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: header;
+  padding: 2rem 3rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  flex: 0 0 70%;
+  align-items: center;
+}
+.search i {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.account i {
+  color: #333;
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.account-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  margin: 0 1rem;
+}
+
+input[type=search] {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0 1rem;
+  color: #474747;
+  background-color: #e4e4e4;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.header-bottom button {
+  border: none;
+  border-radius: 1rem;
+  padding: 0.7rem 2.7rem;
+  margin: 0 0.5rem;
+  background-color: #3fa4bd;
+  color: #eee;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+}
+
+.greeting {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.username {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f8aa5;
+  color: #fff;
+  grid-area: sidebar;
+  padding: 2rem 2rem;
+}
+.sidebar span {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.sidebar ul li {
+  font-size: 1.2rem;
+  padding: 0.8rem 0;
+}
+.sidebar ul li i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 5px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

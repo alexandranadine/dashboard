@@ -1,0 +1,169 @@
+$turquoise: #1f8aa5;
+$light-turq: #3fa4bd;
+
+$dark-grey: #333;
+$med-grey: #474747;
+$light-grey: #e4e4e4;
+$lightest-grey: #eee;
+$white: #fff;
+$shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  background-color: $lightest-grey;
+  grid-area: main;
+  padding: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 4fr;
+  grid-template-rows: minmax(200px, 1fr) 4fr;
+  grid-template-areas:
+    "sidebar header header header header"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main";
+  width: 100%;
+  height: 100%;
+}
+
+//----------------------------HEADER CSS----------------------------//
+
+.header {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: header;
+  padding: 2rem 3rem;
+  box-shadow: $shadow;
+  z-index: 3;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  flex: 0 0 70%;
+  align-items: center;
+
+  i {
+    color: $dark-grey;
+    font-size: 1.5rem;
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  i {
+    color: $dark-grey;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+}
+
+.account-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: $light-grey;
+  margin: 0 1rem;
+}
+
+input[type="search"] {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0 1rem;
+  color: $med-grey;
+  background-color: $light-grey;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+
+  button {
+    border: none;
+    border-radius: 1rem;
+    padding: 0.7rem 2.7rem;
+    margin: 0 0.5rem;
+    background-color: $light-turq;
+    color: $lightest-grey;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: $light-grey;
+}
+
+.greeting {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.username {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+//----------------------------SIDEBAR CSS----------------------------//
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f8aa5;
+  color: $white;
+  grid-area: sidebar;
+  padding: 2rem 2rem;
+
+  span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem;
+
+    li {
+      font-size: 1.2rem;
+      padding: 0.8rem 0;
+
+      i {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 5px 0;
+      }
+    }
+  }
+}
