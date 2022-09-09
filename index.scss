@@ -1,5 +1,6 @@
 $turquoise: #1f8aa5;
 $light-turq: #3fa4bd;
+$light-pink: #e981ac;
 
 $dark-grey: #333;
 $med-grey: #474747;
@@ -11,12 +12,6 @@ $shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 html,
 body {
   height: 100%;
-}
-
-main {
-  background-color: $lightest-grey;
-  grid-area: main;
-  padding: 1rem;
 }
 
 .container {
@@ -81,6 +76,9 @@ main {
   border-radius: 50%;
   background-color: $light-grey;
   margin: 0 1rem;
+  background: url("cat.jpg") 35% 30%;
+  background-size: 110px;
+  filter: hue-rotate(240deg);
 }
 
 input[type="search"] {
@@ -121,6 +119,9 @@ input[type="search"] {
   height: 75px;
   border-radius: 50%;
   background-color: $light-grey;
+  background: url("cat.jpg") 35% 30%;
+  background-size: 190px;
+  filter: hue-rotate(240deg);
 }
 
 .greeting {
@@ -144,7 +145,7 @@ input[type="search"] {
   padding: 2rem 2rem;
 
   span {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
   }
@@ -166,4 +167,57 @@ input[type="search"] {
       }
     }
   }
+}
+
+//----------------------------MAIN CONTENT CSS----------------------------//
+
+.main {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    "projects announcements"
+    "projects trends";
+  gap: 2rem;
+  padding: 2rem;
+  background-color: $light-grey;
+  overflow: auto;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-area: projects;
+  gap: 2rem;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trends {
+  grid-area: trends;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  background-color: $lightest-grey;
+  box-shadow: $shadow;
+  border-radius: 0.6rem;
+  border-left: 10px solid $light-pink;
+  padding: 1rem;
+}
+
+.announcement-item,
+.trending-item {
+  display: flex;
+  flex-direction: column;
+  background-color: $lightest-grey;
+  box-shadow: $shadow;
+  border-radius: 0.6rem;
+  width: 300px;
+  padding: 1rem;
 }
